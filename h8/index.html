@@ -46,7 +46,9 @@
 			<button class="key" value="+">+</button>
 		</div>
 	</div>
-	<div class="chat"></div>
+	<div class="chat">
+		<div class="head"><h3>Чатик</h3></div>
+	</div>
 	<script src="js/script.js"></script>
 	<script>
 		let button = document.querySelectorAll("button");
@@ -65,23 +67,26 @@
 
     		});
 		});
+		// document.addEventListener('keydown', event => {
+  //   		if ((event.key).match(/[0-9%\/*\-+\(\)=]|Backspace|Enter/)) calc(event.key)
+		// })		
 		let stl = "";
 		let messList = "";
 		let talkList = [
-			{user: "Alex", message: "text", pos: "0", isMyMessage: false},
-			{user: "Ivan", message: "some text", pos: "30px", isMyMessage: true},
-			{user: "Alex", message: "text1", pos: "60px", isMyMessage: false},
-			{user: "Ivan", message: "some text1", pos: "90px", isMyMessage: true},			
-			{user: "Alex", message: "text2", pos: "120px", isMyMessage: false},
-			{user: "Ivan", message: "some text2", pos: "150px", isMyMessage: true}				
+			{user: "Alex", message: "text", pos: "30px", isMyMessage: false},
+			{user: "Ivan", message: "some text", pos: "70px", isMyMessage: true},
+			{user: "Alex", message: "text1", pos: "110px", isMyMessage: false},
+			{user: "Ivan", message: "some text1", pos: "150px", isMyMessage: true},			
+			{user: "Alex", message: "text2", pos: "190px", isMyMessage: false},
+			{user: "Ivan", message: "some text2", pos: "230px", isMyMessage: true}				
 		];
 		talkList.forEach(item => {
 			if(item.isMyMessage === false){
-				stl = "width:100px; position: absolute; left:0; top:"+item.pos+"; background-color: green; color: #fff;";
+				stl = "width:100px; position: absolute; left:0; top:"+item.pos+"; background-color: green; color: #fff;padding: 5px; border-radius: 5px;";
 				//alert(stl);
 			}	
 			if (item.isMyMessage === true){
-				stl = "width:100px; position: absolute; right:0; top:"+item.pos+"; background-color: blue; color: #fff;"; 
+				stl = "width:100px; position: absolute; right:0; top:"+item.pos+"; background-color: blue; color: #fff;padding: 5px; border-radius: 5px;"; 
 				//alert(stl);
 			}
 			messList = "<div style=\""+ stl +"\"><h5>" + item.user + "</h5><p>" + item.message + "</p></div>";
