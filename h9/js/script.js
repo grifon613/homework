@@ -1,7 +1,7 @@
 let memory = [];
 
 function calculate(data){
-	let operator = ["+", "-", "*", "/", "%"];
+	let operator = ["+", "-", "*", "/", "%", "("];
 	for(let i = 0; i < operator.length; i++){
 		for(let y = 0; y < data.length; y++){
 			if(operator[i] === data[y]){
@@ -15,6 +15,8 @@ function calculate(data){
 					case "/": div(data);
 					break;
 					case "%": abs(data);
+					break;
+					case "(": brackets(data);
 					break;					
 				}
 			}
@@ -85,6 +87,13 @@ function abs(data){
 	memory.push('{operation: \"' + data + '\"', 'result: \"' + result + '\"},');
 	showHistory(memory);	
 }		
+
+function brackets(data){
+	//alert(data);
+	let number = data.replace(/[()]/g, "");
+	//alert(number);
+	calculate(number);
+}
 
 function showHistory(memory){
 	let item = "";
