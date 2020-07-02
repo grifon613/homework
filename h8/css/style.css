@@ -68,8 +68,19 @@ html,body{
 }
 
 .chat{
-	width: 200px;
+	top: 15px;
+	left: 50px;
+	width: 220px;
 	height: 400px;
 	position: absolute;
-	left: 0;
+}
+
+.chat>.head{
+	top: 0;
+	padding: 3px;
+	color: #ffffff;
+	position: relative;
+	text-align: right;
+	border-radius: 3px 3px 0 0;
+	background-color: #336699;
 }
