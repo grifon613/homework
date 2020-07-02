@@ -101,5 +101,4 @@ function showHistory(memory){
 		item += memory[i];
 	}
 	document.querySelector(".history").innerHTML = item;
->>>>>>> e3e866073d2a69de696fd8e31e90a693db2682d2
 }
