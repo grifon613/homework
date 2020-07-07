@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		async function wait() {
+  			await new Promise(resolve => setTimeout(resolve, 1000));
+			return 10;
+		}
+		function test() {
+  			wait().then(result => alert("task 1: " + result));
+		}
+		test();
+	</script>
+
+	<p>task 2</p>
+	<p>
+		Нет, они не равны:
+		1. Разница в том, что если ошибка происходит в f1, то она обрабатывается .catch здесь:
+		promise
+  			then(f1)
+  			.catch(f2);
+
+		2.Но не здесь:
+		promise
+  			.then(f1, f2);
+
+		Ошибка передается по цепочке, а во втором фрагменте кода нет цепочки ниже f1.
+		.then передает результаты / ошибки следующему .then / catch.
+	</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.weather{
+	top: 10%;
+	width: 450px;
+	height: 100px;
+	display: flex;
+	position: absolute;
+	border-radius: 5px;
+	flex-direction: column;
+	border: 1px solid #cfcfcf;
+	justify-content: space-between;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.weather>.weather__icon{
+	left: 0;
+	top: 0;
+	border: none;
+	position: absolute;
+}
+
+h2{
+	left: 210px;
+	top: 20px;
+	position: absolute;
+}
+
+.weather>.weather__forecast{
+	top: 20px;
+	left: 120px;
+	font-size: 50px;
+	font-weight: bold;
+	position: absolute;
+}
+
+.weather__forecast_minmax{
+	left: 220px;
+	top: 50px;
+	position: absolute;
+}
+
+.weather__desc{
+	top: 50px;
+	left: 295px;
+	position: absolute;
+}
+
+.weather__day_forecast{
+	top: 180px;
+	left: 10px;
+	height: 200px;
+	display: flex;
+	font-size: 8px;
+	position: absolute;
+	flex-direction: row;
+	font-family: Segoe UI;
+}
+
+.forecast{
+	width: 100px;
+}
