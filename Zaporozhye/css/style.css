@@ -1,0 +1,105 @@
+@font-face {
+	font-family: PTSans;
+	src: url('../fonts/PTSans-Regular.ttf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: PTSans;
+}
+
+html,body{
+	overflow: hidden;
+	background-size: contain;
+	background: transparent url("../img/back.jpg") no-repeat center center fixed;
+}
+
+.overlay{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	-moz-transform: rotate(110deg) scale(2) skew(30deg, 0deg) translateY(-270px);
+	-webkit-transform: rotate(110deg) scale(2) skew(30deg, 0deg) translateY(-270px);
+	-o-transform: rotate(110deg) scale(2) skew(30deg, 0deg) translateY(-270px);
+	-ms-transform: rotate(110deg) scale(2) skew(30deg, 0deg) translateY(-270px);
+	transform: rotate(110deg) scale(2) skew(30deg, 0deg) translateY(-270px);
+}
+
+.container{
+	padding: 35px;
+	width: 1280px;
+	max-width: 1440px;
+}
+
+.container>header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.container>header>.logo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.container>header>.logo>.gerb{
+	width: 80px;
+}
+
+.container>header>.logo>h1{
+	top: 20px;
+	left: 10px;
+	color: #ffffff;
+	position: relative;
+}
+
+.container>header>ul{
+	top: 30px;
+	padding: 10px;
+	display: flex;
+	z-index: 9999;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.container>header>ul>li{
+	width: 110px;
+	display: block;
+	list-style: none;
+}
+
+.container>header>ul>li>a{
+	padding: 5px;
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;	
+	text-decoration: none;
+}
+
+.container>header>ul>li>form>input[type="text"]{
+	padding: 2px;
+	width: 150px;
+	border: 1px solid #cfcfcf;
+	border-radius: 2px 2px 2px 2px;
+}
+
+.container>header>ul>li>form>input[type="text"]:focus{
+	outline: none;
+}
+
+.container>header>ul>li>form>button{
+	top: -23px;
+	left: 139px;
+	border: none;
+	position: relative;
+	background: transparent;
+}
+
+.container>footer{
+	right: 20px;
+	bottom: 0px;
+	position: relative;
+}
