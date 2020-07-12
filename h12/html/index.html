@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<script>
+		alert("Task #1:");
+		let schedule = {};
+		alert(isEmpty(schedule)); // true
+		schedule["8:30"] = "get up";
+		alert(isEmpty(schedule)); // false
+		alert("Task #2:");
+		let salaries = {
+  			John: 100,
+  			Ann: 160,
+  			Pete: 130
+		};	
+		let sum = 0;
+		for (let key in salaries) {
+  			sum += salaries[key];
+		}
+		alert(sum); // 390
+		alert("Task #3:");
+		calculator.read();
+		alert(calculator.sum());
+		alert(calculator.mul());
+		alert("Task #4:");
+		askPassword(user.loginOk.bind(user), user.loginFail.bind(user));		
+	</script>
+</body>
+</html>
