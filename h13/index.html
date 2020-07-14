@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+//Task 1
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    //!!!!!!!!!!!!!!!!!!!!!
+    this.stomach = [food];
+  }
+};
+
+let speedy = {
+  __proto__: hamster
+};
+
+let lazy = {
+  __proto__: hamster
+};
+
+// Этот хомяк нашёл еду
+speedy.eat("apple");
+alert( speedy.stomach ); // apple
+
+// У этого хомяка тоже есть еда. Почему? Исправьте
+alert( lazy.stomach ); // apple
+
+//Task 2
+class ​Animal {​ 
+ 
+  constructor(​​name)​ ​{​ 
+    t​his.​​name ​= ​name;​ 
+  }​ 
+ 
+} 
+ 
+class ​Rabbit ​extends ​Animal {​ 
+  constructor(​​name)​ ​{​ 
+    //!!!!!!!!!!!!!!!!!!!!!!!!
+    ​super(name); 
+    t​his.​c​reated ​= ​Date.​​now(​); 
+  }​ 
+} 
+ 
+let ​rabbit ​= ​​new ​Rabbit(​"​Белый кролик")​; ​/​/ Error: this is not defined 
+alert(​r​abbit.​​name)​; 
+	</script>
+</body>
+</html>
