@@ -1,0 +1,15 @@
+<div class="slider">
+{{#each slider}}
+<div class="item">
+<img src="img/slider/{{this}}">
+<div class="slideText">Заголовок слайда</div>
+</div>
+{{/each}}
+<a class="prev" onclick="minusSlide()">&#10094;</a>
+<a class="next" onclick="plusSlide()">&#10095;</a>
+</div>
+<!--<div class="slider-dots">
+{{#each slider}}
+    <span class="slider-dots_item" onclick="currentSlide({{@index}})"></span> 
+{{/each}}
+</div>//-->

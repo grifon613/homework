@@ -1,0 +1,12 @@
+<div class="login"><form name="login" method="post" action="/login">
+        <label>Имя</label><br>
+        <input type="text" name="userName"><br><br>
+        <label>Пароль</label><br>
+        <input type="password" name="userPassword"><br><br>
+        <input type="submit" value="Вход" onclick=saveData(document.forms["login"].elements["userName"].value)>
+</form></div>
+<script>
+	function saveData(data){
+		localStorage.setItem('name', data);
+	}
+</script>
